@@ -1,13 +1,15 @@
 <template>
     <ion-page>
-      dddd
+      <ion-header>
+        <div>dddd</div>
+      </ion-header>
+      <ion-content :fullscreen="true">
+        
+      </ion-content>
     </ion-page>
-  </template>
+</template>
   
-  <script setup>
-  import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-  import { ellipse, square, triangle } from 'ionicons/icons';
-  
-  
+  <script setup lang="ts">
+  import { IonPage, IonHeader, IonContent } from '@ionic/vue';
   </script>
   

@@ -1,19 +1,24 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import Main from '../views/Main.vue';
+import TabsPage from '../views/TabsPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/main.vue'
+    redirect: '/main'  // '/' 경로는 '/main'으로 리다이렉트합니다.
   },
   {
-    path: '/tabs/',
+    path: '/main',  // '/main' 경로로 접근하면
+    component: Main  // Main 컴포넌트를 보여줍니다.
+  },
+  {
+    path: '/tabs/',  // '/tabs/' 경로는 TabsPage 컴포넌트를 렌더링합니다.
     component: TabsPage,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/tabs/tab1'  // 기본적으로 '/tabs/tab1'로 리다이렉트
       },
       {
         path: 'tab1',
@@ -36,4 +41,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
