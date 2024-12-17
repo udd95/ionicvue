@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import Main from '../views/Main.vue';
+import Login from '../views/Login.vue';
 import TabsPage from '../views/TabsPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/main'  // '/' 경로는 '/main'으로 리다이렉트합니다.
+    redirect: '/login'  // '/' 경로는 '/main'으로 리다이렉트합니다.
   },
   {
-    path: '/main',  // '/main' 경로로 접근하면
-    component: Main  // Main 컴포넌트를 보여줍니다.
+    path: '/login',  // '/main' 경로로 접근하면
+    component: Login  // Main 컴포넌트를 보여줍니다.
   },
   {
     path: '/tabs/',  // '/tabs/' 경로는 TabsPage 컴포넌트를 렌더링합니다.
